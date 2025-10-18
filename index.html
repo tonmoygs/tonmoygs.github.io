@@ -1,127 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tonmoy Ghosh - CV</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonmoy Ghosh - Cybersecurity Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #2980b9;
+            --background-color: #f8f9fa;
+            --card-color: #ffffff;
+            --text-color: #333333;
+            --light-text: #7f8c8d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--card-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .profile-image i {
+            font-size: 60px;
+            color: var(--light-text);
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #ecf0f1;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 25px 30px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 22px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .experience-item, .education-item, .publication-item, .project-item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+
+        .item-date {
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: var(--accent-color);
+        }
+
+        .item-description {
+            margin-bottom: 8px;
+        }
+
+        .item-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .item-link:hover {
+            text-decoration: underline;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .skill-category h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .skill-list {
+            list-style-type: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-list li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .goals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .goal-item {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f1f8ff;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-section {
+                justify-content: center;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+            
+            .item-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-section">
+                <div class="profile-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Tonmoy Ghosh</h1>
+                    <p class="title">Cybersecurity Researcher & Software Engineer</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>tonmoyghs.swe@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(+880)1747749864</span>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/tonmoyghosh" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-<body class="bg-gradient-to-br from-blue-50 via-white to-teal-50 text-gray-800 font-sans leading-relaxed tracking-wide">
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>Cybersecurity enthusiast with aspirations to advance as a researcher and contribute to strengthening public and private security through innovative approaches.</p>
+        </section>
 
-  <!-- Header -->
-  <header class="flex flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto px-6 py-8 border-b border-gray-300">
-    <div class="flex items-center space-x-6">
-      <img src="your-photo.jpg" alt="Tonmoy Ghosh" class="w-32 h-32 rounded-xl object-cover shadow-lg border border-gray-200">
-      <div>
-        <h1 class="text-3xl font-bold text-gray-800">Tonmoy Ghosh</h1>
-        <p class="text-gray-600">Dhaka, Bangladesh</p>
-        <p class="text-gray-600">📧 tonmoyghs.swe@gmail.com</p>
-      </div>
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Researcher</div>
+                    <div class="item-date">Jun 2019 – Sep 2021</div>
+                </div>
+                <div class="item-subtitle">Cyber Security Center (CSC), Daffodil International University</div>
+                <div class="item-description">Dhaka, Bangladesh</div>
+            </div>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Cybersecurity Visiting Student Research (CyberVSR) Program</div>
+                    <div class="item-date">May 2022 – July 2022</div>
+                </div>
+                <div class="item-subtitle">Rochester Institute of Technology, New York, USA</div>
+                <div class="item-description">Remote Internship</div>
+            </div>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Self Research Projects</div>
+                    <div class="item-date">August 2022 – Present</div>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Internship</div>
+                    <div class="item-date">Sep 2017 – Dec 2017</div>
+                </div>
+                <div class="item-subtitle">Daffodil Software Limited</div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">B.Sc. in Software Engineering</div>
+                    <div class="item-date">Jan 2015 – May 2019</div>
+                </div>
+                <div class="item-subtitle">Daffodil International University</div>
+                <div class="item-description">Dhaka, Bangladesh</div>
+                <div class="item-description">CGPA: 3.80/4.00</div>
+                <div class="item-description">Thesis: SQL Injectability Detection Using Deep Learning</div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Certified Ethical Hacker (CEH)</div>
+                    <div class="item-date">Apr 2021</div>
+                </div>
+                <div class="item-subtitle">EC-Council</div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publication-item">
+                <div class="item-title">SQL Injection Vulnerability Detection Using Deep Learning: A Feature-based Approach (2021)</div>
+                <a href="https://www.doi.org/10.52549/.v9i3.3131" class="item-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Publication
+                </a>
+                <div class="item-description">Proposed a mechanism to automatically detect SQL injection vulnerabilities of web applications using Deep Learning.</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">Optimizing Password Security: A Robust Mechanism to Prevent Guessing Attacks and Validate Legitimate Users (2025)</div>
+                <a href="https://doi.org/10.1109/ICICT64582.2025.00014" class="item-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Publication
+                </a>
+                <div class="item-description">Proposed an innovative idea to assist users with increased attempts for failed login, provide solution to 5/10 attempts block, and stop impersonation.</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">Elevating Cyber Resilience: A Dynamic Paradigm for Password Policies in the Evolving Cyber Landscape (2025)</div>
+                <a href="https://doi.org/10.1109/ICICT64582.2025.00015" class="item-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Publication
+                </a>
+                <div class="item-description">Proposed several novel password creation rules and discussed techniques for users to interact with those rules keeping the usability-security balance intact.</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">Unveiling Zero-Click Attacks: Mapping MITRE ATT&CK Framework for Enhanced Cybersecurity (2025)</div>
+                <div class="item-description">Accepted at CMC – Computers, Materials & Continua</div>
+                <div class="item-description">Analyzed zero-click attacks in details and mapped the findings on MITRE ATT&CK framework to quantify the extent and impact of those attacks.</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">AdaptAuth: Multi-Layered Analysis for a Secure and Adaptive Authentication Framework for Password Security (2025)</div>
+                <a href="https://doi.org/10.48550/arXiv.2510.09645" class="item-link" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Publication
+                </a>
+                <div class="item-description">Merges password dissection and dynamic policy mechanisms, introducing 173 features for ML-based legitimate user profiling and adaptive authentication.</div>
+            </div>
+            <div class="publication-item">
+                <div class="item-title">Attacks on Passwords: Understanding the Effectiveness of Proposed Countermeasures</div>
+                <div class="item-description">Status: Under development</div>
+                <div class="item-description">Reviews prior password security research, assessing how countermeasures address attacks, where gaps remain, and why progress has stalled.</div>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Honors and Awards</h2>
+            <div class="experience-item">
+                <div class="item-title">Runner-up, DIU App Contest 2017</div>
+                <div class="item-subtitle">Daffodil International University</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Lab Experience & Projects</h2>
+            <div class="project-item">
+                <div class="item-title">Password Dissection and Guessing Attack Prevention</div>
+                <div class="item-description">Developed integrated mechanisms to analyze password structures and adapt verification logic for identifying legitimate users and mitigating guessing threats.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">Dynamic Password Policy Framework</div>
+                <div class="item-description">Designed rule-based modules for generating and managing dynamic password policies with automatic updates to enhance adaptability and password resilience.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">AdaptAuth</div>
+                <div class="item-description">Combined password dissection and dynamic policy mechanisms into a unified authentication framework defining 173 behavioral and contextual features for ML-based legitimacy profiling.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">SQL Injection Feature Extraction Tool & Dataset</div>
+                <div class="item-description">Developed an automated feature-extraction tool for SQL injectability and created a custom dataset to feed into Deep Learning model.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">Threat Quantification (CyberVSR, RIT)</div>
+                <div class="item-description">Analyzed prioritized threats derived from cybersecurity training curricula and mapped them to the MITRE ATT&CK Framework to assess and quantify their impact.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">Zero-Click Attack Mapping</div>
+                <div class="item-description">Structured and mapped zero-click exploitation chains to MITRE ATT&CK's techniques and sub-techniques following NIST mapping guidelines.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">Secure Application Development</div>
+                <div class="item-description">Developed a Django-based appointment system implementing secure login, input validation, and access control mechanisms.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">Audio Steganography Analysis</div>
+                <div class="item-description">Investigated audio-based data hiding techniques to understand encoding and detection principles relevant to covert communication channels.</div>
+            </div>
+            <div class="project-item">
+                <div class="item-title">Network Setup and Subnetting</div>
+                <div class="item-description">Configured virtual network environments and implemented subnetting schemes to support controlled lab testing and security simulations.</div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Knowledge Areas</h3>
+                    <ul class="skill-list">
+                        <li>Web Application Vulnerabilities</li>
+                        <li>Linux Shell & Shell Scripting</li>
+                        <li>MITRE Attack Framework</li>
+                        <li>AI Analysis in Research</li>
+                        <li>Machine Learning</li>
+                        <li>Data Processing</li>
+                        <li>Networking</li>
+                        <li>Windows</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>VirtualBox/VMware</li>
+                        <li>Metasploit</li>
+                        <li>Burp Suite</li>
+                        <li>Nessus</li>
+                        <li>Wireshark</li>
+                        <li>Nmap</li>
+                        <li>Hasheat</li>
+                        <li>Cisco Packet Tracer</li>
+                        <li>OWASP ZAP</li>
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Django</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                        <li>C</li>
+                        <li>Latex</li>
+                        <li>HTML</li>
+                        <li>Mendeley</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals">
+            <h2>Future Goals</h2>
+            <div class="goals">
+                <div class="goal-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Professional Goal</h3>
+                    <p>To be a Computer Security Scientist</p>
+                </div>
+                <div class="goal-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Personal Goal</h3>
+                    <p>To be a better Human Being</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2023 Tonmoy Ghosh. All rights reserved.</p>
+        </footer>
     </div>
 
-    <div class="flex space-x-5 mt-4 sm:mt-0">
-      <a href="https://linkedin.com/in/tonmoyghosh" target="_blank" class="text-blue-600 text-2xl hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
-      <a href="https://scholar.google.com" target="_blank" class="text-gray-700 text-2xl hover:text-gray-900"><i class="fas fa-graduation-cap"></i></a>
-    </div>
-  </header>
+    <script>
+        // Function to handle profile picture upload
+        function handleProfilePictureUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const profileImage = document.querySelector('.profile-image');
+                    profileImage.innerHTML = `<img src="${e.target.result}" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">`;
+                }
+                reader.readAsDataURL(file);
+            }
+        }
 
-  <!-- Summary -->
-  <section class="max-w-5xl mx-auto px-6 py-6">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Profile</h2>
-    <p class="text-gray-700">
-      Cybersecurity enthusiast with aspirations to advance as a researcher and contribute to strengthening public and private security through innovative approaches.
-    </p>
-  </section>
-
-  <!-- Work Experience -->
-  <section class="max-w-5xl mx-auto px-6 py-6">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Work Experience</h2>
-    <ul class="space-y-4">
-      <li>
-        <h3 class="font-bold">Researcher – Cyber Security Center, Daffodil International University</h3>
-        <p class="text-sm text-gray-600">Jun 2019 – Sep 2021 | Dhaka, Bangladesh</p>
-      </li>
-      <li>
-        <h3 class="font-bold">Intern – Cybersecurity Visiting Student Research (CyberVSR), RIT</h3>
-        <p class="text-sm text-gray-600">May 2022 – Jul 2022 | New York, USA (Remote)</p>
-      </li>
-      <li>
-        <h3 class="font-bold">Self Research Projects</h3>
-        <p class="text-sm text-gray-600">Aug 2022 – Present</p>
-      </li>
-      <li>
-        <h3 class="font-bold">Intern – Daffodil Software Limited</h3>
-        <p class="text-sm text-gray-600">Sep 2017 – Dec 2017</p>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Education -->
-  <section class="max-w-5xl mx-auto px-6 py-6">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Education</h2>
-    <p class="font-bold">B.Sc. in Software Engineering – Daffodil International University</p>
-    <p class="text-sm text-gray-600">Jan 2015 – May 2019 | CGPA: 3.80/4.00</p>
-    <p class="text-gray-700">Thesis: SQL Injectability Detection Using Deep Learning</p>
-  </section>
-
-  <!-- Certifications -->
-  <section class="max-w-5xl mx-auto px-6 py-6">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Certification</h2>
-    <p><strong>Certified Ethical Hacker (CEH)</strong> – EC-Council (Apr 2021)</p>
-  </section>
-
-  <!-- Publications -->
-  <section class="max-w-5xl mx-auto px-6 py-6">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Publications</h2>
-    <ol class="list-decimal pl-5 space-y-2 text-gray-700">
-      <li><strong>SQL Injection Vulnerability Detection Using Deep Learning:</strong> <a href="https://www.doi.org/10.52549/.v9i3.3131" class="text-blue-600 hover:underline">DOI Link</a></li>
-      <li><strong>Optimizing Password Security:</strong> <a href="https://doi.org/10.1109/ICICT64582.2025.00014" class="text-blue-600 hover:underline">DOI Link</a></li>
-      <li><strong>Elevating Cyber Resilience:</strong> <a href="https://doi.org/10.1109/ICICT64582.2025.00015" class="text-blue-600 hover:underline">DOI Link</a></li>
-      <li><strong>Unveiling Zero-Click Attacks:</strong> Accepted at CMC – Computers, Materials & Continua.</li>
-      <li><strong>AdaptAuth:</strong> <a href="https://doi.org/10.48550/arXiv.2510.09645" class="text-blue-600 hover:underline">arXiv Link</a></li>
-      <li><strong>Attacks on Passwords:</strong> Under development.</li>
-    </ol>
-  </section>
-
-  <!-- Lab Experience -->
-  <section class="max-w-5xl mx-auto px-6 py-6">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Lab Experience</h2>
-    <ul class="list-disc pl-5 space-y-1 text-gray-700">
-      <li>Password Dissection and Guessing Attack Prevention</li>
-      <li>Dynamic Password Policy Framework</li>
-      <li>AdaptAuth Framework</li>
-      <li>SQL Injection Feature Extraction Tool</li>
-      <li>Threat Quantification (CyberVSR, RIT)</li>
-      <li>Zero-Click Attack Mapping</li>
-      <li>Secure Application Development (Django)</li>
-      <li>Audio Steganography Analysis</li>
-      <li>Network Setup and Subnetting</li>
-    </ul>
-  </section>
-
-  <!-- Tools & Skills -->
-  <section class="max-w-5xl mx-auto px-6 py-6">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Tools & Technologies</h2>
-    <p class="text-gray-700">
-      VirtualBox, Metasploit, Burp Suite, Nessus, Wireshark, Nmap, Hashcat, Cisco Packet Tracer, OWASP ZAP, Python, Flask, Django, SQL, JavaScript, C, LaTeX, HTML, Mendeley
-    </p>
-  </section>
-
-  <!-- Future Goals -->
-  <section class="max-w-5xl mx-auto px-6 py-6 pb-10">
-    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Future Goals</h2>
-    <ul class="list-disc pl-5 text-gray-700">
-      <li>To be a Computer Security Scientist</li>
-      <li>To be a better Human Being</li>
-    </ul>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-gray-500 py-6 border-t border-gray-300 text-sm">
-    © 2025 Tonmoy Ghosh. All Rights Reserved.
-  </footer>
-
+        // Create file input for profile picture
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImage = document.querySelector('.profile-image');
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = 'image/*';
+            fileInput.style.display = 'none';
+            fileInput.addEventListener('change', handleProfilePictureUpload);
+            
+            profileImage.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            profileImage.title = "Click to upload profile picture";
+            profileImage.style.cursor = "pointer";
+            
+            document.body.appendChild(fileInput);
+        });
+    </script>
 </body>
 </html>
