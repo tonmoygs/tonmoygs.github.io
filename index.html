@@ -3,186 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tonmoy Ghosh - Cybersecurity Enthusiast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2b1c7e5b1.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #f0f4f8, #dfe9f3);
-      margin: 0;
-      color: #222;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px;
-      background: #fff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      border-radius: 16px;
-      margin-top: 40px;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 20px;
-    }
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 8px;
-      background: #ddd;
-      background-size: cover;
-      background-position: center;
-      margin-right: 25px;
-    }
-    header .info {
-      flex: 1;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #1b263b;
-    }
-    header p {
-      margin: 4px 0;
-      color: #444;
-    }
-    .socials a {
-      margin-right: 12px;
-      color: #1b263b;
-      font-size: 20px;
-      text-decoration: none;
-    }
-    section {
-      margin-top: 30px;
-    }
-    section h2 {
-      border-left: 5px solid #3a506b;
-      padding-left: 10px;
-      color: #1b263b;
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-    .publication a {
-      color: #3a506b;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #555;
-    }
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .profile-pic {
-        margin: 0 auto 15px auto;
-      }
-    }
-  </style>
+  <title>Tonmoy Ghosh - CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="profile-pic" style="background-image: url('your-photo.jpg');"></div>
-      <div class="info">
-        <h1>Tonmoy Ghosh</h1>
-        <p>Dhaka, Bangladesh | <a href="mailto:tonmoyghs.swe@gmail.com">tonmoyghs.swe@gmail.com</a></p>
-        <div class="socials">
-          <a href="https://linkedin.com/in/tonmoyghosh" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-        </div>
+
+<body class="bg-gradient-to-br from-blue-50 via-white to-teal-50 text-gray-800 font-sans leading-relaxed tracking-wide">
+
+  <!-- Header -->
+  <header class="flex flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto px-6 py-8 border-b border-gray-300">
+    <div class="flex items-center space-x-6">
+      <img src="your-photo.jpg" alt="Tonmoy Ghosh" class="w-32 h-32 rounded-xl object-cover shadow-lg border border-gray-200">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-800">Tonmoy Ghosh</h1>
+        <p class="text-gray-600">Dhaka, Bangladesh</p>
+        <p class="text-gray-600">📧 tonmoyghs.swe@gmail.com</p>
       </div>
-    </header>
+    </div>
 
-    <section>
-      <h2>Profile</h2>
-      <p>Cybersecurity enthusiast with aspirations to advance as a researcher and contribute to strengthening public and private security through innovative approaches.</p>
-    </section>
+    <div class="flex space-x-5 mt-4 sm:mt-0">
+      <a href="https://linkedin.com/in/tonmoyghosh" target="_blank" class="text-blue-600 text-2xl hover:text-blue-800"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com" target="_blank" class="text-gray-700 text-2xl hover:text-gray-900"><i class="fas fa-graduation-cap"></i></a>
+    </div>
+  </header>
 
-    <section>
-      <h2>Work Experience</h2>
-      <ul>
-        <li><strong>Researcher – Cyber Security Center (CSC), Daffodil International University</strong><br>Jun 2019 – Sep 2021 | Dhaka, Bangladesh</li>
-        <li><strong>Cybersecurity Visiting Student Research (CyberVSR), Rochester Institute of Technology</strong><br>May 2022 – Jul 2022 | Remote, USA</li>
-        <li><strong>Self Research Projects</strong> (Aug 2022 – Present)</li>
-        <li><strong>Internship – Daffodil Software Limited</strong><br>Sep 2017 – Dec 2017</li>
-      </ul>
-    </section>
+  <!-- Summary -->
+  <section class="max-w-5xl mx-auto px-6 py-6">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Profile</h2>
+    <p class="text-gray-700">
+      Cybersecurity enthusiast with aspirations to advance as a researcher and contribute to strengthening public and private security through innovative approaches.
+    </p>
+  </section>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>B.Sc. in Software Engineering</strong> – Daffodil International University (CGPA: 3.80/4.00)</p>
-      <p>Thesis: <em>SQL Injectability Detection Using Deep Learning</em></p>
-    </section>
+  <!-- Work Experience -->
+  <section class="max-w-5xl mx-auto px-6 py-6">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Work Experience</h2>
+    <ul class="space-y-4">
+      <li>
+        <h3 class="font-bold">Researcher – Cyber Security Center, Daffodil International University</h3>
+        <p class="text-sm text-gray-600">Jun 2019 – Sep 2021 | Dhaka, Bangladesh</p>
+      </li>
+      <li>
+        <h3 class="font-bold">Intern – Cybersecurity Visiting Student Research (CyberVSR), RIT</h3>
+        <p class="text-sm text-gray-600">May 2022 – Jul 2022 | New York, USA (Remote)</p>
+      </li>
+      <li>
+        <h3 class="font-bold">Self Research Projects</h3>
+        <p class="text-sm text-gray-600">Aug 2022 – Present</p>
+      </li>
+      <li>
+        <h3 class="font-bold">Intern – Daffodil Software Limited</h3>
+        <p class="text-sm text-gray-600">Sep 2017 – Dec 2017</p>
+      </li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Certified Ethical Hacker (CEH) – EC-Council (Apr 2021)</li>
-      </ul>
-    </section>
+  <!-- Education -->
+  <section class="max-w-5xl mx-auto px-6 py-6">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Education</h2>
+    <p class="font-bold">B.Sc. in Software Engineering – Daffodil International University</p>
+    <p class="text-sm text-gray-600">Jan 2015 – May 2019 | CGPA: 3.80/4.00</p>
+    <p class="text-gray-700">Thesis: SQL Injectability Detection Using Deep Learning</p>
+  </section>
 
-    <section>
-      <h2>Publications</h2>
-      <ul class="publication">
-        <li>SQL Injection Vulnerability Detection Using Deep Learning: A Feature-based Approach (2021) – <a href="https://www.doi.org/10.52549/.v9i3.3131" target="_blank">DOI</a></li>
-        <li>Optimizing Password Security (2025) – <a href="https://doi.org/10.1109/ICICT64582.2025.00014" target="_blank">DOI</a></li>
-        <li>Elevating Cyber Resilience (2025) – <a href="https://doi.org/10.1109/ICICT64582.2025.00015" target="_blank">DOI</a></li>
-        <li>Unveiling Zero-Click Attacks (2025) – Accepted at CMC – Computers, Materials & Continua</li>
-        <li>AdaptAuth (2025) – <a href="https://doi.org/10.48550/arXiv.2510.09645" target="_blank">arXiv</a></li>
-      </ul>
-    </section>
+  <!-- Certifications -->
+  <section class="max-w-5xl mx-auto px-6 py-6">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Certification</h2>
+    <p><strong>Certified Ethical Hacker (CEH)</strong> – EC-Council (Apr 2021)</p>
+  </section>
 
-    <section>
-      <h2>Honors & Awards</h2>
-      <p>Runner-up – DIU App Contest 2017</p>
-    </section>
+  <!-- Publications -->
+  <section class="max-w-5xl mx-auto px-6 py-6">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Publications</h2>
+    <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+      <li><strong>SQL Injection Vulnerability Detection Using Deep Learning:</strong> <a href="https://www.doi.org/10.52549/.v9i3.3131" class="text-blue-600 hover:underline">DOI Link</a></li>
+      <li><strong>Optimizing Password Security:</strong> <a href="https://doi.org/10.1109/ICICT64582.2025.00014" class="text-blue-600 hover:underline">DOI Link</a></li>
+      <li><strong>Elevating Cyber Resilience:</strong> <a href="https://doi.org/10.1109/ICICT64582.2025.00015" class="text-blue-600 hover:underline">DOI Link</a></li>
+      <li><strong>Unveiling Zero-Click Attacks:</strong> Accepted at CMC – Computers, Materials & Continua.</li>
+      <li><strong>AdaptAuth:</strong> <a href="https://doi.org/10.48550/arXiv.2510.09645" class="text-blue-600 hover:underline">arXiv Link</a></li>
+      <li><strong>Attacks on Passwords:</strong> Under development.</li>
+    </ol>
+  </section>
 
-    <section>
-      <h2>Lab Experience</h2>
-      <ul>
-        <li>Password Dissection and Guessing Attack Prevention</li>
-        <li>Dynamic Password Policy Framework</li>
-        <li>AdaptAuth Framework</li>
-        <li>SQL Injection Feature Extraction Tool & Dataset</li>
-        <li>Threat Quantification (CyberVSR, RIT)</li>
-        <li>Zero-Click Attack Mapping</li>
-        <li>Secure Application Development</li>
-        <li>Audio Steganography Analysis</li>
-        <li>Network Setup and Subnetting</li>
-      </ul>
-    </section>
+  <!-- Lab Experience -->
+  <section class="max-w-5xl mx-auto px-6 py-6">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Lab Experience</h2>
+    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+      <li>Password Dissection and Guessing Attack Prevention</li>
+      <li>Dynamic Password Policy Framework</li>
+      <li>AdaptAuth Framework</li>
+      <li>SQL Injection Feature Extraction Tool</li>
+      <li>Threat Quantification (CyberVSR, RIT)</li>
+      <li>Zero-Click Attack Mapping</li>
+      <li>Secure Application Development (Django)</li>
+      <li>Audio Steganography Analysis</li>
+      <li>Network Setup and Subnetting</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Tools & Technologies</h2>
-      <p>Python, Flask, Django, SQL, C, JavaScript, Burp Suite, Metasploit, Wireshark, Nmap, OWASP ZAP, Cisco Packet Tracer, VirtualBox, Nessus, Latex, Mendeley</p>
-    </section>
+  <!-- Tools & Skills -->
+  <section class="max-w-5xl mx-auto px-6 py-6">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Tools & Technologies</h2>
+    <p class="text-gray-700">
+      VirtualBox, Metasploit, Burp Suite, Nessus, Wireshark, Nmap, Hashcat, Cisco Packet Tracer, OWASP ZAP, Python, Flask, Django, SQL, JavaScript, C, LaTeX, HTML, Mendeley
+    </p>
+  </section>
 
-    <section>
-      <h2>Future Goals</h2>
-      <ul>
-        <li>To be a Computer Security Scientist</li>
-        <li>To be a better Human Being</li>
-      </ul>
-    </section>
+  <!-- Future Goals -->
+  <section class="max-w-5xl mx-auto px-6 py-6 pb-10">
+    <h2 class="text-2xl font-semibold border-b-2 border-teal-400 inline-block mb-3">Future Goals</h2>
+    <ul class="list-disc pl-5 text-gray-700">
+      <li>To be a Computer Security Scientist</li>
+      <li>To be a better Human Being</li>
+    </ul>
+  </section>
 
-    <footer>
-      <p>© 2025 Tonmoy Ghosh | Designed for GitHub Pages</p>
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 py-6 border-t border-gray-300 text-sm">
+    © 2025 Tonmoy Ghosh. All Rights Reserved.
+  </footer>
+
 </body>
 </html>
