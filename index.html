@@ -39,6 +39,7 @@
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             overflow: hidden;
+            position: relative;
         }
 
         header {
@@ -48,6 +49,29 @@
             display: flex;
             align-items: center;
             gap: 25px;
+            position: relative;
+        }
+
+        .research-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .research-link:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .profile-section {
@@ -245,6 +269,14 @@
                 text-align: center;
             }
             
+            .research-link {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 15px;
+                align-self: flex-end;
+            }
+            
             .profile-section {
                 justify-content: center;
             }
@@ -262,6 +294,9 @@
 <body>
     <div class="container">
         <header>
+            <a href="research.html" class="research-link">
+                <i class="fas fa-comments"></i> Research Discussion
+            </a>
             <div class="profile-section">
                 <div class="profile-image">
                     <i class="fas fa-user"></i>
