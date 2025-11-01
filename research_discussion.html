@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Articles - Tonmoy Ghosh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #2980b9;
+            --background-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .top-nav {
+            background-color: var(--background-color);
+            padding: 20px 40px;
+            border-bottom: 1px solid #eaeaea;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: inline-flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 8px 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a.active {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 18px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Scrollable Rows */
+        .rows-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-height: 70vh;
+            overflow-y: auto;
+            padding: 10px 5px;
+        }
+
+        /* Article Row */
+        .article-row {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--secondary-color);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-row:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content {
+            flex: 1;
+        }
+
+        .article-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .article-description {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .article-image {
+            width: 200px; /* Increased width */
+            height: 140px; /* Slightly increased height */
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eaeaea;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Changed to contain for better clarity */
+            padding: 5px;
+            background-color: white;
+        }
+
+        .article-image i {
+            font-size: 50px; /* Larger icons */
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+            border-top: 1px solid #eaeaea;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .article-row {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .article-image {
+                width: 100%;
+                height: 200px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research.html" class="active">Research Discussion</a>
+            <a href="index.html#publications">Publications</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>Research Articles</h1>
+        <p class="subtitle">Click on any article to read more</p>
+
+        <div class="rows-container">
+            
+            <!-- ARTICLE 1: Password Security -->
+            <a href="a_brief_discussion_on_password_dissection_mechanism.html" class="article-row">
+                <div class="article-content">
+                    <h3 class="article-title">A Brief Discussion on Password Dissection Mechanism</h3>
+                    <p class="article-description">
+                        One of my own innovative thinking in password security ecosystem is Password Dissection mechanism. This mechanism has mainly been proposed to establish more control over password and the inputs in password fields. The main motivation behind breaking a password string into small pieces comes from the "differential calculus' lim h->0" where the calculation for very small change in 'h' can be done and h->0 made me realize I have to go small to have best understanding and best...
+                    </p>
+                </div>
+                <div class="article-image">
+                    <img src="Robust Password Security_Numbering the dissected blocks.png" alt="Your Image Description">
+                </div>
+            </a>
+
+            <!-- ARTICLE 2: SQL Injection -->
+            <a href="what_if.html" class="article-row">
+                <div class="article-content">
+                    <h3 class="article-title">What If?</h3>
+                    <p class="article-description">
+                        Password security has been an important part in data security and it has remained the same (only few policy changes) despite a lot of studies, application of new concepts and research on futuristic concept like password-less authentication (no one knows when it will arrive and how it will be). Complex password combinations, lengthy passwords along with other policies have been proposed but...
+                    </p>
+                </div>
+                <div class="article-image">
+                    <img src="complete_security_framework.png" alt="Your Image Description">
+                </div>
+            </a>
+
+            <!-- ARTICLE 3: Zero-Click Attacks -->
+            <a href="the_password_dilemma.html" class="article-row">
+                <div class="article-content">
+                    <h3 class="article-title">The Password Dilemma</h3>
+                    <p class="article-description">
+                        In the picture on the right, I have addressed a common problem that almost every person who has ever used authentication has faced. I have named it “The Password Dilemma.” My current focus is to work on this widespread issue and develop a user-friendly solution to assist people in the easiest and most effective way...
+                    </p>
+                </div>
+                <div class="article-image">
+                    <img src="the_password_dilemma.png" alt="Your Image Description">
+                </div>
+            </a>
+
+            <!-- ARTICLE 4: Adaptive Authentication -->
+            <a href="review_on_google_dependency_based_authentication.html" class="article-row">
+                <div class="article-content">
+                    <h3 class="article-title">A Review on Google's Dependency-Based Authentication</h3>
+                    <p class="article-description">
+                        Google’s device-verification-based authentication has been puzzling to me for a long time. In my opinion, this mechanism has increased people’s dependency in the authentication process. That is why I call it “dependency-based authentication,” where, to log in to a new device, a person must confirm the attempt from a previously used (trusted) device...
+                    </p>
+                </div>
+                <div class="article-image">
+                    <img src="google_dependency_based_authentication.jpg" alt="Your Image Description">
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Tonmoy Ghosh. All rights reserved.</p>
+    </footer>
+</body>
+</html>

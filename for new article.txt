@@ -1,0 +1,16 @@
+<!-- NEW ARTICLE: Your Article Title -->
+<a href="article-your-topic.html" class="article-row">
+    <div class="article-content">
+        <h3 class="article-title">Your Article Title Here</h3>
+        <p class="article-description">
+            Your article description goes here. Write a short paragraph 
+            describing what your research is about.
+        </p>
+    </div>
+    <div class="article-image">
+        <!-- For icon: -->
+        <i class="fas fa-your-icon"></i>
+        <!-- OR for image: -->
+        <!-- <img src="your-image.jpg" alt="Your Image Description"> -->
+    </div>
+</a>
