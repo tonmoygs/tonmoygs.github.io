@@ -328,12 +328,22 @@
             margin-left: 10px;
         }
 
+        .badge-ongoing {
+            background-color: #e3f2fd;
+            color: var(--accent-color);
+        }
+
         .badge-under-dev {
             background-color: #fff3cd;
             color: #856404;
         }
 
         .badge-future {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .badge-completed {
             background-color: #d4edda;
             color: #155724;
         }
@@ -351,6 +361,23 @@
             border-radius: var(--border-radius);
             border-left: 4px solid #ffc107;
             margin-bottom: 20px;
+        }
+
+        /* Project name styling - made larger */
+        .project-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .project-subtitle {
+            font-size: 16px;
+            color: var(--light-text);
+            margin-bottom: 15px;
+            font-style: italic;
         }
 
         footer {
@@ -390,6 +417,10 @@
             
             .nav-links {
                 gap: 20px;
+            }
+            
+            .project-name {
+                font-size: 20px;
             }
         }
     </style>
@@ -482,7 +513,7 @@
                         <div class="item-title">RESEARCH ASSISTANT (Qualitative Interviewer)</div>
                         <div class="item-date">Jan 2024 – Feb 2024</div>
                     </div>
-                    <div class="item-subtitle">Short-Term Research Project -Decryptint</div>
+                    <div class="item-subtitle">Short-Term Research Project -- Decryptint, India</div>
                 </div>
                 
                 <div class="experience-item">
@@ -526,7 +557,7 @@
                     <div class="item-description">Certification No.: ECC7154360298</div>
                 </div>
             </section>
-            
+
             <section id="awards">
                 <h1>Honors and Awards</h1>
                 <div class="experience-item">
@@ -538,27 +569,10 @@
             <section id="publications">
                 <h1>Projects and Publications</h1>
                 
-                <!-- Project 1: SQL Injection -->
+                <!-- Project 1: Adaptive Authentication Framework -->
                 <div class="publication-item">
-                    <div class="item-title">Analysis of Injection Vulnerability Using Machine Learning Techniques <span class="badge">Project 1</span></div>
-                    <div class="project-leader">Led by: Professor Maruf Hassan</div>
-                    
-                    <div class="item-title" style="margin-top: 15px; font-size: 16px;">SQL injection vulnerability detection using deep learning: a feature-based approach</div>
-                    <div class="publication-venue">Hassan, M. M., Ahmad, R. B., & Ghosh, T. (2021). Indonesian Journal of Electrical Engineering and Informatics (IJEEI), 9(3), 702-718</div>
-                    <a href="https://www.doi.org/10.52549/.v913.3131" class="item-link" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> View Publication
-                    </a>
-                    <div class="contributions-container">
-                        <div class="contribution-item">Analyzed SQL injection attack and extracted features based on SQL injection payloads and exploitation points to build a dataset</div>
-                        <div class="contribution-item">Built a tool with Python to automate the data collection using those features and dataset making process</div>
-                        <div class="contribution-item">Used trial-and-error method to find out best machine learning model and found deep learning best performer</div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Adaptive Authentication -->
-                <div class="publication-item">
-                    <div class="item-title">Adaptive Authentication Framework <span class="badge">Project 2</span></div>
-                    <div class="project-leader">Led by: Tommy Ghosh</div>
+                    <div class="project-name">Project 1: Adaptive Authentication Framework <span class="badge badge-ongoing">Ongoing</span></div>
+                    <div class="project-leader">Led by: Tonmoy Ghosh</div>
                     
                     <div class="item-title" style="margin-top: 15px; font-size: 16px;">Adaptive Password Policies: A New Paradigm for Cyber Resilience in Modern Threat Landscape</div>
                     <div class="publication-venue">Ghosh, T., Gudla, C., Ahmed, F., Rana, M. S., & Hasan, M. M. (2025). In 2025 8th International Conference on Information and Computer Technologies (ICICT) (pp. 55-60). IEEE</div>
@@ -605,9 +619,9 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Zero-Click Attacks -->
+                <!-- Project 2: Analysis of Spywares -->
                 <div class="publication-item">
-                    <div class="item-title">Analysis of Spywares and Building a Threat Model <span class="badge">Project 3</span></div>
+                    <div class="project-name">Project 2: Analysis of Spywares and Building a Threat Model</div>
                     <div class="project-leader">Led by: Professor Shohel Rana</div>
                     
                     <div class="item-title" style="margin-top: 15px; font-size: 16px;">Unveiling Zero-Click Attacks: Mapping MITRE ATT&CK Framework for Enhanced Cybersecurity</div>
@@ -623,10 +637,20 @@
                     </div>
                 </div>
 
+                <!-- Project 3: Bkash Shinkei -->
+                <div class="publication-item">
+                    <div class="project-name">Project 3: Bkash Shinkei (2024) - Decryptint</div>
+                    <div class="contributions-container">
+                        <div class="contribution-item">Conducted structured and semi-structured interviews with participants to support data collection</div>
+                        <div class="contribution-item">Ensured ethical compliance and maintained participant confidentiality</div>
+                        <div class="contribution-item">Collaborated with the research team to refine interview protocols and improve data quality</div>
+                    </div>
+                </div>
+
                 <!-- Project 4: CyberVSR -->
                 <div class="publication-item">
-                    <div class="item-title">Quantitatively Measure the Effectiveness of Threat Assessment Through Pen-Testing Knowledge <span class="badge">Project 4</span></div>
-                    <div class="project-leader">Led by: Professor Shanchieh Jay Yang (CyberVSR 2022, RIT)</div>
+                    <div class="project-name">Project 4: Quantitatively Measure the Effectiveness of Threat Assessment Through Pen-Testing Knowledge (CyberVSR 2022, RIT)</div>
+                    <div class="project-leader">Led by: Professor Shanchieh Jay Yang</div>
                     <div class="contributions-container">
                         <div class="contribution-item">Analyzed prioritized threats derived from cybersecurity training curriculum of various organizations and collected data</div>
                         <div class="contribution-item">Mapped those data onto MITRE ATT&CK framework</div>
@@ -634,9 +658,26 @@
                     </div>
                 </div>
 
-                <!-- Project 5: Future Project -->
+                <!-- Project 5: SQL Injection -->
                 <div class="publication-item">
-                    <div class="item-title">User Specific Privacy Profiling to Protect User Data and Privacy <span class="badge badge-future">Future Project</span></div>
+                    <div class="project-name">Project 5: Analysis of Injection Vulnerability Using Machine Learning Techniques</div>
+                    <div class="project-leader">Led by: Professor Maruf Hassan</div>
+                    
+                    <div class="item-title" style="margin-top: 15px; font-size: 16px;">SQL injection vulnerability detection using deep learning: a feature-based approach</div>
+                    <div class="publication-venue">Hassan, M. M., Ahmad, R. B., & Ghosh, T. (2021). Indonesian Journal of Electrical Engineering and Informatics (IJEEI), 9(3), 702-718</div>
+                    <a href="https://www.doi.org/10.52549/.v9i3.3131" class="item-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Publication
+                    </a>
+                    <div class="contributions-container">
+                        <div class="contribution-item">Analyzed SQL injection attack and extracted features based on SQL injection payloads and exploitation points to build a dataset</div>
+                        <div class="contribution-item">Built a tool with Python to automate the data collection using those features and dataset making process</div>
+                        <div class="contribution-item">Used trial-and-error method to find out best machine learning model and found deep learning best performer</div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Future Project -->
+                <div class="publication-item">
+                    <div class="project-name">Project 6 (Future): User Specific Privacy Profiling to Protect User Data and Privacy <span class="badge badge-future">Future Project</span></div>
                     <div class="project-leader">Will be led by: Tonmoy Ghosh</div>
                     <div class="contributions-container">
                         <div class="contribution-item">A survey on third-party applications to build a standard for permissions to access data</div>
@@ -646,23 +687,13 @@
                     </div>
                 </div>
 
-                <!-- Project 6: Django Project -->
+                <!-- Project 7: Django Project -->
                 <div class="publication-item">
-                    <div class="item-title">Teacher Appointment System Development Using Python Django <span class="badge">Undergraduate Project</span></div>
+                    <div class="project-name">Project 7: Teacher Appointment System Development Using Python Django <span class="badge badge-completed">Undergraduate Project</span></div>
                     <div class="contributions-container">
                         <div class="contribution-item">Role-based personal profile creation</div>
                         <div class="contribution-item">Teacher can schedule an appointment</div>
                         <div class="contribution-item">Student can schedule an appointment to a teacher and request for approval</div>
-                    </div>
-                </div>
-
-                <!-- Project 7: Bkash Shinkei -->
-                <div class="publication-item">
-                    <div class="item-title">Bkash Shinkei - Decryptint <span class="badge">Short-Term Project</span></div>
-                    <div class="contributions-container">
-                        <div class="contribution-item">Conducted structured and semi-structured interviews with participants to support data collection</div>
-                        <div class="contribution-item">Ensured ethical compliance and maintained participant confidentiality</div>
-                        <div class="contribution-item">Collaborated with the research team to refine interview protocols and improve data quality</div>
                     </div>
                 </div>
             </section>
